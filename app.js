@@ -2,7 +2,8 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+res.sendFile('survey.html', {root: 'public'});
+
 });
 
 app.listen(3000, function () {
