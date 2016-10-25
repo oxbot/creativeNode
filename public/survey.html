@@ -1,1 +1,37 @@
-<h1>Survey</h1>
+<!doctype HTML>
+<html>
+		<head>
+		<script>
+			function submit() {
+				var candidate = document.getElementById('candidate').options[document.getElementById('candidate').selectedIndex].value
+				console.log(candidate)
+				var sex = document.getElementById('sex').options[document.getElementById('sex').selectedIndex].value
+				console.log(sex)
+			}
+		
+		</script>
+		</head>
+	<body>
+		<h1>Survey</h1>
+
+		<select id="candidate">
+			<option value="trump">Donald Trump</option>
+			<option value="clinton">Hillary Clinton</option>
+			<option value="stein">Jill Stein</option>
+			<option value="johnson">Gary Johnson</option>
+			<option value="mcmullin">Evan McMullin</option>
+			<option value="other">Other</option>
+
+		</select>
+	<br>
+		<select id="sex">
+		<option value="male"> Male</option>
+ 		 <option value="female"> Female</option>
+  		<option value="other"> Other</option>
+		</select>
+	<br>
+	<button id="submit" onClick="submit();">Submit</button>
+	<br>
+		<div id="results"></div>
+	</body>
+</html>
