@@ -13,7 +13,8 @@
 				console.log(sex)
 
 				$.get('../getDetails',function(data) {
-					document.getElementById('results').innerHtml = data
+					document.getElementById('results').innerHTML = '<h2>' + data['name'] + '</h2>'
+	console.log(data)
 				});
 			}
 		
