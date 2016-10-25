@@ -1,0 +1,21 @@
+{
+  "name": "creativeNode",
+  "version": "0.0.0",
+  "description": "WE WILL PREVAIL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oxbot/creativeNode.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/oxbot/creativeNode/issues"
+  },
+  "dependencies": {
+    "express": "~4.14.0"
+  }
+}
