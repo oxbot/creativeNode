@@ -1,12 +1,20 @@
 <!doctype HTML>
 <html>
 		<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+
+
 		<script>
 			function submit() {
 				var candidate = document.getElementById('candidate').options[document.getElementById('candidate').selectedIndex].value
 				console.log(candidate)
 				var sex = document.getElementById('sex').options[document.getElementById('sex').selectedIndex].value
 				console.log(sex)
+
+				$.get('../getDetails',function(data) {
+					document.getElementById('results').innerHtml = data
+				});
 			}
 		
 		</script>
