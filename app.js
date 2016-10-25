@@ -10,6 +10,11 @@ res.sendFile('survey.html', {root: 'public'});
 
 app.get('/getDetails', function(req, res) {
 	console.log("in get details")
+
+	var candidate = req.query.candidate
+	var sex = req.query.sex
+
+	console.log("received: " + candidate + " " + sex)
 	var jsonresult ={'name': "trump"}
 			
 	res.status(200).json(jsonresult)

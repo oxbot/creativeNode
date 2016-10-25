@@ -12,7 +12,7 @@
 				var sex = document.getElementById('sex').options[document.getElementById('sex').selectedIndex].value
 				console.log(sex)
 
-				$.get('../getDetails',function(data) {
+				$.get('../getDetails?candidate=' + candidate +'&sex='+sex ,function(data) {
 					document.getElementById('results').innerHTML = '<h2>' + data['name'] + '</h2>'
 	console.log(data)
 				});
