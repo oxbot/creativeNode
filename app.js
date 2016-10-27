@@ -19,7 +19,7 @@ app.get('/getDetails', function(req, res) {
 			
 	res.status(200).json(jsonresult)
 });
-
+app.use(express.static('resources'));
 
 app.listen(3000, function () {
   console.log(' listening on port 3000!');

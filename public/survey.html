@@ -1,7 +1,9 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html>
 		<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		
+	<link rel="stylesheet" href="style/style.css"> 		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
 </script>
 
 
@@ -20,9 +22,11 @@
 		
 		</script>
 		</head>
-	<body>
+	<body id="outer">
+		<div class="container inner">
 		<h1>Survey</h1>
-
+		<div class="form-group">
+		<label for="candidate">Candidate:</label>
 		<select id="candidate">
 			<option value="trump">Donald Trump</option>
 			<option value="clinton">Hillary Clinton</option>
@@ -33,14 +37,17 @@
 
 		</select>
 	<br>
+		<label for="sex">Gender:</label>
 		<select id="sex">
 		<option value="male"> Male</option>
  		 <option value="female"> Female</option>
   		<option value="other"> Other</option>
 		</select>
+		</div>
 	<br>
 	<button id="submit" onClick="submit();">Submit</button>
 	<br>
 		<div id="results"></div>
+		</div>
 	</body>
 </html>
