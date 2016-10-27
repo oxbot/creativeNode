@@ -15,8 +15,11 @@
 				console.log(sex)
 
 				$.get('../getDetails?candidate=' + candidate +'&sex='+sex ,function(data) {
-					document.getElementById('results').innerHTML = '<h2>' + data['name'] + '</h2>'
-	console.log(data)
+					console.log(data);
+					document.getElementById('results').innerHTML = '<h2><a href=\"' + data['link'] + '\"/>' + data['name'] + '</a></h2>' + 
+										       '<img src=\"' + data['image'] + '\" height=\"200px\" display=\"block\" margin=\"auto\"/>' +
+										       '<p>' + data['text'] + '</p>';				
+			//console.log(data)
 				});
 			}
 		
