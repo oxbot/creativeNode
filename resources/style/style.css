@@ -1,8 +1,29 @@
 h1 {
+	color: ghostwhite;
 }
 #outer {
 }
 
 .inner {
 	text-align: center;
+	padding-top: 10px;
+	background-color: darkblue;
+	border: 1px solid black;
+	border-radius: 25px;
+	padding-bottom: 25px;
+}
+label {
+	color: white;
+}
+
+img {
+	margin-bottom: 10px;
+}
+
+a {
+	color: ghostwhite;
+}
+
+p {
+	color: white;
 }

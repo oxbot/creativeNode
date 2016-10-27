@@ -11,9 +11,10 @@
 			function submit() {
 				var candidate = document.getElementById('candidate').options[document.getElementById('candidate').selectedIndex].value
 				console.log(candidate)
-				var sex = document.getElementById('sex').options[document.getElementById('sex').selectedIndex].value
-				console.log(sex)
-
+				//var sex = document.getElementById('sex').options[document.getElementById('sex').selectedIndex].value
+				var sex = 'other';	
+			console.log(sex)
+				
 				$.get('../getDetails?candidate=' + candidate +'&sex='+sex ,function(data) {
 					console.log(data);
 					document.getElementById('results').innerHTML = '<h2><a href=\"' + data['link'] + '\"/>' + data['name'] + '</a></h2>' + 
@@ -27,7 +28,7 @@
 		</head>
 	<body id="outer">
 		<div class="container inner">
-		<h1>Survey</h1>
+		<h1>Candidates</h1>
 		<div class="form-group">
 		<label for="candidate">Candidate:</label>
 		<select id="candidate">
@@ -39,13 +40,14 @@
 			<option value="other">Other</option>
 
 		</select>
-	<br>
+	<br><!--
 		<label for="sex">Gender:</label>
 		<select id="sex">
 		<option value="male"> Male</option>
  		 <option value="female"> Female</option>
   		<option value="other"> Other</option>
 		</select>
+		-->
 		</div>
 	<br>
 	<button id="submit" onClick="submit();">Submit</button>
